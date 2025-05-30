@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #16423C;
+    color: #C4DAD2;;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+#palindromeForm {
+    background-color: #E9EFEC;;
+    color: #16423C;
+    margin: 2rem;
+    padding: 2.5rem;
+    border-radius: 30px;
+    max-width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input[type="text"] {
+    background-color: #C4DAD2;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #16423C;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom: 2px solid #16423C;
+}
+
+button[type="submit"] {
+    background-color: #16423C;
+    color: #E9EFEC;
+    padding: 0.5rem 1rem;
+    border: 2px solid #16423C;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    max-width: 100px;
+}
+
+button[type="submit"]:hover {
+    background-color: #E9EFEC;
+    color: #16423C;
+}
+
+#result {
+    display: none;    
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+#results.palindrome {
+    color: #2E7D32;
+    border-top: 2px solid #2E7D32;
+    border-bottom: 2px solid #2E7D32;
+}
+
+#results.not-palindrome {
+    color: #C62828;
+    border-top: 2px solid #C62828;
+    border-bottom: 2px solid #C62828;
+}
+
+@media screen and (max-width: 412px) {
+    html {
+        font-size: 14px;
+    }
+}
