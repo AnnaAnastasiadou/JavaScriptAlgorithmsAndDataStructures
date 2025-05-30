@@ -62,7 +62,7 @@ input[type="text"]:focus {
     border-bottom: 2px solid #16423C;
 }
 
-button[type="submit"] {
+#check-btn {
     background-color: #16423C;
     color: #E9EFEC;
     padding: 0.5rem 1rem;
@@ -74,7 +74,7 @@ button[type="submit"] {
     max-width: 100px;
 }
 
-button[type="submit"]:hover {
+#check-btn:hover {
     background-color: #E9EFEC;
     color: #16423C;
 }
@@ -89,13 +89,13 @@ button[type="submit"]:hover {
     padding: 1rem;
 }
 
-#results.palindrome {
+#result.palindrome {
     color: #2E7D32;
     border-top: 2px solid #2E7D32;
     border-bottom: 2px solid #2E7D32;
 }
 
-#results.not-palindrome {
+#result.not-palindrome {
     color: #C62828;
     border-top: 2px solid #C62828;
     border-bottom: 2px solid #C62828;
