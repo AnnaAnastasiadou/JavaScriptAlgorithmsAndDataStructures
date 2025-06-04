@@ -81,6 +81,7 @@ convertBtn.addEventListener("click", checkUserInput);
 
 numberInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
+    e.preventDefault(); // Prevent form submission
     checkUserInput();
   }
 });

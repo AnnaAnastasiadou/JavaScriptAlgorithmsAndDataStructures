@@ -37,7 +37,7 @@ h2 {
     text-align: left;
 }
 
-form{
+#input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,13 +101,13 @@ form{
     transform: translateY(0px); /* Pressed state */
 }
 
-#result h2, #result p {
+#result-container h2, #result p {
     display: inline;
 }
 
 
-#result {
-    display: block;
+#result-container {
+    display: none;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
