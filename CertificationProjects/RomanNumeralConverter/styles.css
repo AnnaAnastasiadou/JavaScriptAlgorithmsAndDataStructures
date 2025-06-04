@@ -1,0 +1,124 @@
+:root {
+    --background-color: #780000;
+    --text-color: #fff5ee;
+    --accent-color: #e0caae;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 20px;
+    max-width: 400px;
+}
+
+#number {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    border-bottom: 2px solid var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+    transition: 0.2s ease-in-out;
+}
+
+#number::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+#number:focus {
+    outline: none;
+    border: 2px solid var(--text-color);
+}
+
+/* 3D Button*/
+.pushable {
+    display: block;
+    background-color: #e0caae;
+    border-radius: 60px;
+    border: none;
+    margin-top: 5px;
+    padding: 0;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.front {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 60px;
+    font-size: 1.2rem;
+    background: var(--text-color);
+    color: var(--background-color);
+    font-weight: 600;
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.pushable:hover .front {
+    transform: translateY(-3px); /* Slightly pressed on hover */
+}
+
+.pushable:active .front {
+    transform: translateY(0px); /* Pressed state */
+}
+
+#result h2, #result p {
+    display: inline;
+}
+
+
+#result {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: 2px solid var(--accent-color);
+    padding: 20px;
+}
+
+@media screen and (max-width: 460px) {
+    html {
+        font-size: 16px;
+    }
+}
