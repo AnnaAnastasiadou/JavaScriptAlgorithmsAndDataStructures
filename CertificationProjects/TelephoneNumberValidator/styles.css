@@ -1,0 +1,136 @@
+:root {
+    --valid-green: rgb(22, 163, 74);
+    --error-red: rgb(220, 38, 38);
+    --background: rgb(208, 218, 227);
+    --text-dark: rgb(0, 0, 0);
+    --title-color: rgb(0, 0, 64);
+    --phone-color: rgb(255, 255, 255);
+    --button-bg: rgb(0, 0, 64);
+}   
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px; /* Base font size */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: "-apple-system", "Segoe UI", Roboto;
+    background-color: var(--background);
+    color: var(--text-dark);
+    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+#title {
+    font-size: 2rem;
+    color: var(--title-color);
+    text-align: center;
+}
+
+#title, #descritpion {
+    text-align: center;
+}
+
+#phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 1rem;
+    height: 60vh;
+    min-height: 400px;
+    min-width: 225px;
+    padding: 0.5rem;
+    background-color: var(--phone-color);
+    border-radius: 30px;
+    box-shadow: 2px 10px 20px black, 
+                2px 2px 3px rgba(180, 189, 196, 0.5) inset;
+    padding: 2rem 1rem;
+}
+
+#phone input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(180, 189, 196, 0.6);
+    box-shadow: 2px 2px 5px rgba(180, 189, 196, 0.5);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-dark);
+}
+
+#phone input:focus {
+    outline: none;
+    border-color: var(--text-dark);
+    box-shadow: 0 0 5px var(--text-dark);
+}
+
+#results-div .valid{
+    color: var(--valid-green);
+}
+
+#results-div .invalid{
+    color: var(--error-red);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    font-family: "-apple-system", "Segoe UI", Roboto;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--button-bg);
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--button-bg);
+    color: var(--phone-color);
+}
+
+.button:hover {
+    background-color: var(--background);
+}
+
+.button:hover, .button:hover .icon {
+    color: var(--button-bg);
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+}
+
+@media screen and (max-width: 460px) {
+    html{
+        font-size: 16px; /* Adjust base font size for smaller screens */
+    }
+    #phone {
+        min-width: 0;
+        height: 50vh;
+    }
+    .button { 
+        flex-direction: column;
+    }
+}
