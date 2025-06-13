@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
+    <title>Cash Register</title>
+</head>
+<body>
+    <h1>Cash Register</h1>
+    <div id="change due"></div>
+    <div id="input-container">
+        <label for="cash">Enter cash from customer:</label>
+        <input type="number" id="cash" >
+    </div>
+    <button id="purchase-btn">Purchase</button>
+    <div id="cash-register">
+        <div id="top-register">
+            <div id="top-register-inside">
+                <div id="receipt-slit">
+                    <div id="receipt">
+                        <p class="bold">Change in drawer:</p>
+
+                        <p>Pennies: $0.99</p>
+                        <p>Nickels: $2.05</p>
+                        <p>Dimes: $3</p>.1
+                        <p>Quarters: $3.75</p>
+                        <p>Ones: $88</p>
+                        <p>Fives: $55</p>
+                        <p>Tens: $20</p>
+                        <p>Twenties: $60</p>
+                        <p>Hundreds: $100</p>
+                    </div>
+                   </div> 
+                <div id="total">99999</div>
+            </div>
+        </div>
+        <div id="middle-register">
+            <div id="buttons">
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+                <div class="registry-button"></div>
+            </div>
+        </div>
+        <div id="bottom-register">
+            <div id="bottom-register-inside"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

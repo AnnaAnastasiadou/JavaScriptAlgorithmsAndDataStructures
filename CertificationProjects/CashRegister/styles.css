@@ -1,0 +1,207 @@
+:root {
+  --background-color: #1e1a16;
+  --register-color: #a67c52;           
+  --register-secondary-color: #6b4226;  
+  --receipt-color: #f4f1ea;
+  --text-color: #f5f5f5;
+  --text-color-dark: #000000;
+  --border-color: #3e2c1c;
+  --text-glow: #54c3fa;   
+  --button-color: #800020;       
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: calc(100vh - 2rem);
+    padding: 1rem;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#cash {
+    max-width: 150px;
+    padding: 0.25rem;
+}
+
+#cash:focus {
+    outline: 1px solid var(--register-color);
+}
+
+#purchase-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    border: #929292 1px solid;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.1s ease;
+}
+
+#purchase-btn:hover {
+    background-color: var(--register-secondary-color);
+    color: var(--text-color);
+}
+
+#cash-register {
+    margin: 0;
+    padding-top: 170px;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    overflow: auto;
+    border: 1px solid var(--border-color);
+}
+
+#top-register {
+    background-color: var(--register-color);
+    width: 400px;
+    height: 100px;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px solid #000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-register-inside {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#receipt-slit {
+    width: 50%;
+    height: 3px;
+    background-color: var(--border-color);
+    position: relative;
+    overflow: visible; /* Allows receipt to extend beyond */
+}
+
+#receipt {
+    position: absolute;
+    width: 100%;
+    height: 210px;
+    background-color: var(--receipt-color);
+    top: -210px;
+    font-size: 0.9rem;
+    color: var(--text-color-dark);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#total {
+    width: 30%;
+    height: 100%;
+    background-color: #d4d4d4; 
+    border-radius: 10px;  
+    border: 1px solid var(--border-color);
+    color: var(--text-color-dark);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7),
+                inset 0 0 5px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: 'DS-Digital', sans-serif;                              
+    text-shadow: 
+        0 0 5px var(--text-glow);
+}
+
+#middle-register {
+    background-color: var(--register-color);
+    width: 460px;
+    height: 200px;
+    border-left: 30px solid var(--background-color);
+    border-right: 30px solid var(--background-color);
+    border-bottom: 200px solid transparent;
+    position: relative;
+}
+
+#buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(-7deg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px; 
+    padding: 20px;
+    width: 60%;
+    height: 100%;
+}
+
+.registry-button {
+    background-color: var(--receipt-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 22px;
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.3),
+        0 2px 3px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.registry-button:hover {
+    transform: translateY(2px);
+        box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+#bottom-register {
+    background-color: var(--register-color);
+    width: 460px;
+    height: 50px;
+    border-top: 1px solid var(--border-color);
+    padding: 5px;
+}
+
+#bottom-register-inside {
+    background-color: var(--register-secondary-color);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+.bold {
+    font-weight: bold;
+}
