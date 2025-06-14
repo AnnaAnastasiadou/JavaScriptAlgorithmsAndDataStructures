@@ -116,7 +116,7 @@ body {
 }
 
 #receipt h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: min(0.5rem, 2vh);
 }
 
@@ -126,7 +126,7 @@ body {
     height: min(40vh, 200px);
     background-color: var(--receipt-color);
     top: max(-40vh, -200px);
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-color-dark);
     padding: min(1em, 3vh) min(1em, 3vw);
     display: flex;
@@ -161,8 +161,7 @@ body {
     border-right: min(30px, 5vw) solid var(--background-color);
     border-bottom: min(150px, 20vh) solid var(--register-color);
     position: relative;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+
 }
 
 #buttons {
