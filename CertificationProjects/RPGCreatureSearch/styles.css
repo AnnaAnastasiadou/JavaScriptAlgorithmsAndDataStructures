@@ -19,12 +19,15 @@ html {
     box-sizing: border-box;
 }
 
-main {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+main {
     min-height: calc(100vh - 2rem);
 }
 
@@ -41,7 +44,7 @@ h1 {
     color: var(--heading-color);
 }
 
-.container {
+#content-container {
     background-color: var(--container-bg-color);
     padding: 2rem;
     border-radius: 1rem;
@@ -49,6 +52,46 @@ h1 {
     overflow: auto;
 }
 
+#search-container > label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#search-input {
+    padding: 0.3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.2rem;
+}
+
+#search-input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#search-button {
+    background-color: var(--background-color);
+    color: var(--container-bg-color);
+    font-size: 1.1rem;
+    border: 2px solid var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#search-button:hover {
+    transform: translateY(2px)translateX(2px);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+#search-button:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: none
+}
 
 table {
     color: var(--table-text-color);
