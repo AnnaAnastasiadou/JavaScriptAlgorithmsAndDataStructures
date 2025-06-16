@@ -1,0 +1,65 @@
+:root {
+    --background-color: #3c493f;
+    --container-bg-color: #f5f1ed;
+    --text-color: #3c493f;
+    --heading-color: #f5f1ed;
+    --table-bg-color: #a3a09d;
+    --table-text-color: #000000;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    min-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--heading-color);
+}
+
+.container {
+    background-color: var(--container-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+}
+
+
+table {
+    color: var(--table-text-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+td,th {
+    background-color: var(--table-bg-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7),
+                0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+th {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
