@@ -15,14 +15,19 @@ html {
     font-family: 'Times New Roman', serif;
 }
 
-body {
+main {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    gap: 2rem;
+    min-height: calc(100vh - 2rem);
+}
+
+body {
+    height: 100%;
     width: 100%;
+    padding: 1rem;
     background-color: var(--background-color);
     color: var(--text-color);
 }
