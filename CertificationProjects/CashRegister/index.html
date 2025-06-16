@@ -8,41 +8,43 @@
     <title>Cash Register</title>
 </head>
 <body>
-    <h1>Cash Register</h1>
-    <div id="change-due">
-    </div>
-    <div id="input-container">
-        <label for="cash">Enter cash from customer:</label>
-        <input type="number" id="cash" >
-    </div>
-    <button id="purchase-btn">Purchase</button>
-    <div id="cash-register">
-        <div id="top-register">
-            <div id="top-register-inside">
-                <div id="receipt-slit">
-                    <div id="receipt"></div>
-                   </div> 
-                <div id="total">99999</div>
+    <main>
+        <h1>Cash Register</h1>
+        <div id="change-due">
+        </div>
+        <div id="input-container">
+            <label for="cash">Enter cash from customer:</label>
+            <input type="number" id="cash" >
+        </div>
+        <button id="purchase-btn">Purchase</button>
+        <div id="cash-register">
+            <div id="top-register">
+                <div id="top-register-inside">
+                    <div id="receipt-slit">
+                        <div id="receipt"></div>
+                    </div> 
+                    <div id="total">99999</div>
+                </div>
+            </div>
+            <div id="middle-register">
+                <div id="buttons">
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                    <div class="registry-button"></div>
+                </div>
+            </div>
+            <div id="bottom-register">
+                <div id="bottom-register-inside"></div>
             </div>
         </div>
-        <div id="middle-register">
-            <div id="buttons">
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-                <div class="registry-button"></div>
-            </div>
-        </div>
-        <div id="bottom-register">
-            <div id="bottom-register-inside"></div>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
+        
+        <script src="script.js"></script>
+    </main>
 </body>
 </html>
