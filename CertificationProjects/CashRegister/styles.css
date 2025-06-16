@@ -1,0 +1,242 @@
+:root {
+  --background-color: #1e1a16;
+  --register-color: #a67c52;           
+  --register-secondary-color: #6b4226;  
+  --receipt-color: #f4f1ea;
+  --text-color: #f5f5f5;
+  --text-color-dark: #000000;
+  --border-color: #3e2c1c;
+  --text-glow: #54c3fa;   
+  --button-color: #800020;       
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-y: scroll;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: calc(100vh - 2rem);
+    padding: 1rem;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#cash {
+    max-width: 150px;
+    padding: 0.25rem;
+}
+
+#cash:focus {
+    outline: 1px solid var(--register-color);
+}
+
+#purchase-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    border: #929292 1px solid;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.1s ease;
+}
+
+#purchase-btn:hover {
+    background-color: var(--register-secondary-color);
+    color: var(--text-color);
+}
+
+#cash-register {
+    padding-top: 170px;
+    position: relative;
+    height: auto;
+    width: 90%; 
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 80vh;
+    min-height: auto;
+
+}
+
+#top-register {
+    background-color: var(--register-color);
+    width: 80%;
+    height: min(100px, 12vh);
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px solid #000;
+    padding: min(20px, 3vh) min(20px, 3vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-register-inside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#receipt-slit {
+    width: 40%;
+    height: 2px;
+    background-color: var(--border-color);
+    position: relative;
+    overflow: visible;
+    position: relative;
+}
+
+#receipt h2 {
+    font-size: 1rem;
+    margin-bottom: min(0.5rem, 2vh);
+}
+
+#receipt {
+    position: absolute;
+    width: 100%;
+    height: min(40vh, 200px);
+    background-color: var(--receipt-color);
+    top: max(-40vh, -200px);
+    font-size: 0.9rem;
+    color: var(--text-color-dark);
+    padding: min(1em, 3vh) min(1em, 3vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+#total {
+    width: 30%;
+    height: min(100%, 25px);
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color-dark);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7),
+                inset 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: min(1.2rem, 4vw);
+    font-family: 'DS-Digital', sans-serif;
+    text-shadow: 0 0 5px var(--text-glow);
+}
+
+#middle-register {
+    background-color: var(--register-color);
+    width: calc(80% + min(60px, 10vw));
+    height: min(100px, 10vh);
+    border:none;
+    border-left: min(30px, 5vw) solid var(--background-color);
+    border-right: min(30px, 5vw) solid var(--background-color);
+    border-bottom: min(150px, 20vh) solid var(--register-color);
+    position: relative;
+
+}
+
+#buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(-7deg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: min(20px, 3vh);
+    width: 60%;
+    height: 100%;
+}
+
+.registry-button {
+    background-color: var(--receipt-color);
+    border-radius: 50%;
+    width: min(30px, 5vw);
+    height: min(22px, 3vh);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3),
+                0 2px 3px rgba(0, 0, 0, 0.8);
+    cursor: default;
+    transition: all 0.2s ease;
+}
+
+.registry-button:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+#bottom-register {
+    background-color: var(--register-color);
+    width: calc(80% + min(60px, 10vw));
+    height: min(60px, 8vh); 
+    border-top: 1px solid var(--border-color);
+    padding: min(5px, 1vw);
+}
+
+#bottom-register-inside {
+    background-color: var(--register-secondary-color);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+#input-container {
+    flex-shrink: 0;
+    width: 90%;
+    max-width: 500px;
+}
+
+#cash {
+    max-width: min(150px, 30vw);
+    padding: min(0.25rem, 1vw);
+}
+
+#purchase-btn {
+    padding: min(0.5rem, 2vw) min(1rem, 4vw);
+    font-size: min(1rem, 4vh);
+}
+
+@media screen and (max-width: 600px) or (max-height: 600px) {
+    html{
+        font-size: 14px;
+    }
+
+    #receipt-slit {
+        width: 60%;
+        font-size: 0.9rem;
+    }
+
+    #receipt h2 {
+        font-size: 1rem;
+    }
+
+}
